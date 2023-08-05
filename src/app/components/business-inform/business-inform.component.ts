@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {CommonModule, NgForOf} from '@angular/common';
+import { NgForOf} from '@angular/common';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {Router, RouterLink} from "@angular/router";
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import {InputComponent} from "../../shared/input/input.component";
-import {GlobalService} from "../../global.service";
 import {SectionContainerComponent} from "../../shared/section-container/section-container.component";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatSelectModule} from "@angular/material/select";
@@ -20,7 +18,7 @@ import {VerifyAccountComponent} from "../../dialogs/verify-account/verify-accoun
     MatButtonModule,
     RouterLink,
     MatCheckboxModule,
-    InputComponent, SectionContainerComponent, MatButtonToggleModule, MatSelectModule, NgForOf, MatRadioModule ,  MatDialogModule],
+    SectionContainerComponent, MatButtonToggleModule, MatSelectModule, NgForOf, MatRadioModule ,  MatDialogModule],
   templateUrl: './business-inform.component.html',
   styleUrls: ['./business-inform.component.scss']
 })

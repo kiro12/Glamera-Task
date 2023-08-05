@@ -10,7 +10,6 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {CanActivateUser} from "./guards/is-user-approved.guard";
-
 @NgModule({
   declarations: [
     AppComponent],

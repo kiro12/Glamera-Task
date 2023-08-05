@@ -4,7 +4,6 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {GlobalService} from "../../global.service";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import {InputComponent} from "../../shared/input/input.component";
 import {SectionContainerComponent} from "../../shared/section-container/section-container.component";
 import {NgxIntlTelInputModule} from "ngx-intl-tel-input";
 import {CountryISO} from "ngx-intl-tel-input";
@@ -18,7 +17,6 @@ import {CountryISO} from "ngx-intl-tel-input";
     MatButtonModule,
     RouterLink,
     MatCheckboxModule,
-    InputComponent,
     SectionContainerComponent,
     NgxIntlTelInputModule
   ],
