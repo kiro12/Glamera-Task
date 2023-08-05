@@ -47,6 +47,7 @@ export class BusinessInformComponent {
   createAccount() {
     this.dialog.open(VerifyAccountComponent, {
       width: '400px',
+      maxWidth: '100vw',
       hasBackdrop: true,
       panelClass: 'verify-account-dialog'
     })
