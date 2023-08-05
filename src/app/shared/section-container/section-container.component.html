@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-4 col-12">
+
+    <div class="bg-image" [style.background]="'url(' + banner + ')'">
+      <ng-content select="banner-content"></ng-content>
+
+    </div>
+  </div>
+
+  <div class="col-md-8 col-12 d-flex flex-column align-items-center ">
+    <p>Having troubles? <span>Get Help</span></p>
+
+    <ng-content></ng-content>
+  </div>
+</div>

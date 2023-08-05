@@ -1,0 +1,77 @@
+
+<app-section-container [banner]="'../../../assets/images/business.png'">
+  <div class="banner-content m-auto" ngProjectAs="banner-content">
+    <img class="my-4" src="assets/icons/glamera-logo.svg" alt="">
+    <h3>Few clicks away from creating your business</h3>
+    <p>Start your business in minutes. save time and money</p>
+  </div>
+  <form [formGroup]="businessForm">
+    <div class="row">
+      <div class="col-md-8">
+        <img class="my-2" style="cursor:pointer;" routerLink="/" src="assets/icons/arrow-left.svg" alt="">
+        <h1 >Choose the type of business</h1>
+        <p class="subtitle">To get start tell us what type of Business you are going to incorporate and name</p>
+      </div>
+      <div class="col-12">
+
+        <div class="flex-container">
+          <div class="input-block">
+            <label>Business Type</label>
+            <input type="text" name="firstname" placeholder="Enter your Business Type" formControlName="businessType">
+          </div>
+
+        </div>
+        <div class="flex-container flex-column">
+          <label>Business Category</label>
+         <mat-button-toggle-group formControlName="businessCategory">
+           <mat-button-toggle *ngFor="let category of categories" value="{{category}}">
+             <img src="assets/icons/{{category}}.svg" alt="">
+             {{category}}</mat-button-toggle>
+         </mat-button-toggle-group>
+        </div>
+        <div class="flex-container">
+          <div class="input-block">
+            <label>Governorate</label>
+            <mat-select placeholder="Select your governorate" formControlName="governorate">
+              <mat-option *ngFor="let governorate of governorates" value="{{governorate}}">{{governorate}}</mat-option>
+            </mat-select>
+          </div>
+          <div class="input-block">
+            <label>District</label>
+            <mat-select placeholder="Select your district" formControlName="district">
+              <mat-option *ngFor="let governorate of governorates" value="{{governorate}}">{{governorate}}</mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="flex-container">
+          <div class="input-block">
+            <label>How did you know us?</label>
+            <mat-select formControlName="social">
+              <mat-option *ngFor="let social of socialMedia" value="{{social}}">{{social}}</mat-option>
+            </mat-select>
+          </div>
+          <div class="input-block">
+            <label>Are you currently using system ?</label>
+            <mat-radio-group formControlName="isUsingSystem">
+              <mat-radio-button value="yes">Yes</mat-radio-button>
+              <mat-radio-button value="no">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <div class="flex-container">
+          <div class="button-container">
+
+            <button mat-raised-button class="new_button" type="submit" (click)="createAccount()" [disabled]="businessForm.invalid" >CREATE ACCOUNT
+              <img  src="assets/icons/arrow-right-solid.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </form>
+</app-section-container>

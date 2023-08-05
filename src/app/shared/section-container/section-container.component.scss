@@ -1,0 +1,21 @@
+.bg-image{
+  background-size: cover!important;
+  height: 100vh;
+  overflow: hidden;
+  padding: 30px 0;
+  @media screen and (max-width: 992px) {
+    height: 400px;
+  }
+}
+p{
+  margin: 30px 40px 0 0;
+  width: 100%;
+  text-align: right;
+  color: #38383880;
+  font-size: 14px;
+  span{
+    color: #635CA8;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

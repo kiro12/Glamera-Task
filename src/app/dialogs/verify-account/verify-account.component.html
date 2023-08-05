@@ -1,0 +1,13 @@
+<img class="close-dialog" mat-dialog-close="close" src="assets/icons/close.svg" alt="">
+<div class="container  p-5 d-flex justify-content-center align-items-center flex-column text-center">
+  <img src="assets/icons/verify-account.svg" alt="">
+  <h1>Verification Code</h1>
+  <p>Please enter the verification code sent to your phone number ** 34</p>
+  <ng-otp-input class="my-4" style="text-align:center" name="otp" ngDefaultControl (onInputChange)="onOtpChange($event)"
+                [config]="{length:4}"></ng-otp-input>
+  <p *ngIf="!this.isTimeOut">The code will be sent again within <span>{{countdown}}</span> seconds</p>
+  <p *ngIf="this.isTimeOut" (click)="resendCode()"><span>Resend Again</span></p>
+  <button mat-raised-button class=" new_button" [disabled]="otpCode.length < 4" (click)="verifyAccount()" type="submit"  >Verify
+  </button>
+
+</div>

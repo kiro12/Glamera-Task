@@ -1,0 +1,27 @@
+img{
+  width: 100px;
+  margin: 15px 0;
+}
+span{
+  color: #6AC7BB;
+}
+h1{
+  font-weight: bold;
+}
+.new_button{
+  background-color: #635CA8;
+  padding: 20px 15px;
+  color: white;
+  min-width: 200px;
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+}
+.close-dialog{
+  position: absolute;
+  top: 0;
+  left: 10px;
+ width: 20px;
+  cursor: pointer;
+}
